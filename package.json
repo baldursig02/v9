@@ -1,0 +1,25 @@
+{
+  "name": "vef1-2024-v9",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "browser-sync start --server --files ./src/ styles.css index.html",
+    "copy:html": "cpy ./*.html ./build/",
+    "copy:css": "cpy ./*.css ./build/",
+    "copy:js": "cpy ./src ./build/src",
+    "build": "concurrently npm:copy:*",
+    "lint": "eslint ./src",
+    "prettier": "prettier --write ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.12.0",
+    "browser-sync": "^3.0.3",
+    "concurrently": "^9.0.1",
+    "cpy-cli": "^5.0.0",
+    "eslint": "^9.12.0",
+    "globals": "^15.11.0",
+    "prettier": "^3.3.3"
+  }
+}
